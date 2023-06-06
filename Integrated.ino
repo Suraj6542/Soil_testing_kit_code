@@ -24,7 +24,6 @@ void setup()
 }
 void loop()
 {
-  // Soil Moisture Sensor Code
   float moisture_percentage;
   int sensor_analog;
   sensor_analog = analogRead(sensor_pin);
@@ -32,8 +31,7 @@ void loop()
   Serial.print("Moisture Percentage = ");
   Serial.print(moisture_percentage);
   Serial.print("%\n\n");
-
-  // pH Sensor Code
+  
   for(int i=0; i<10; i++)           // Get 10 sample value from the pH sensor for smoothing the value
   { 
     buf[i] = analogRead(pH_sensor_pin);
